@@ -735,20 +735,50 @@ a { color: inherit; text-decoration: none; }
 
 .video-wrapper {
   width: 100%;
-  max-width: 420px;
+  max-width: 780px;
   margin: 0 auto;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(0,0,0,0.15);
   border: 2px solid rgba(201,169,110,0.3);
   background: #000;
+  aspect-ratio: 16 / 9;
 }
 
 .video-wrapper video {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* ===================================================
+   BOOKING SECTION
+   =================================================== */
+.booking-section {
+  background: var(--cream);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.booking-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.booking-intro {
+  font-size: 1.05rem;
+  color: var(--gray-text);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.calendly-inline-widget {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  border: 1px solid rgba(201,169,110,0.2);
 }
 
 /* ===================================================
