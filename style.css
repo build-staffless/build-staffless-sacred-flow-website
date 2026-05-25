@@ -504,6 +504,11 @@ a { color: inherit; text-decoration: none; }
 
 .faq-inner {
   max-width: 800px;
+  text-align: center;
+}
+
+.faq-inner .faq-list {
+  text-align: left;
 }
 
 .faq-list {
@@ -580,6 +585,11 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
   align-items: start;
+}
+
+.contact-form-col .divider-line {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .contact-intro {
@@ -735,34 +745,128 @@ a { color: inherit; text-decoration: none; }
 
 .video-wrapper {
   width: 100%;
-  max-width: 780px;
+  max-width: 1100px;
   margin: 0 auto;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.15);
-  border: 2px solid rgba(201,169,110,0.3);
-  background: #000;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  background: #0d1b2a;
   aspect-ratio: 16 / 9;
+  position: relative;
 }
 
 .video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  background: #0d1b2a;
 }
+
+/* Custom video controls */
+.vcustom-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  z-index: 10;
+}
+
+.vcustom-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.vbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.vbtn:hover { opacity: 1; }
+
+.vprogress-wrap {
+  flex: 1;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.vprogress-bg {
+  height: 4px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  position: relative;
+}
+
+.vprogress-fill {
+  height: 100%;
+  background: #4a9eff;
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.vtime {
+  color: white;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-family: sans-serif;
+}
+
+/* Big play overlay */
+.vplay-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.vplay-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4px;
+  transition: transform 0.15s;
+}
+
+.vplay-circle:hover { transform: scale(1.1); }
 
 /* ===================================================
    BOOKING SECTION
    =================================================== */
 .booking-section {
-  background: var(--cream);
+  background: #ffffff;
   padding: 80px 24px;
   text-align: center;
 }
 
 .booking-inner {
-  max-width: 860px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
